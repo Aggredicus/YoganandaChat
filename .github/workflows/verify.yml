@@ -1,0 +1,22 @@
+name: Verify release integrity
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sha256:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Verify SHA-256 checksums
+        run: sha256sum --check SHA256SUMS
+      - name: Verify manifest checksum
+        run: sha256sum --check manifest.json.sha256
+      - name: Verify checksum-list checksum
+        run: sha256sum --check SHA256SUMS.sha256
