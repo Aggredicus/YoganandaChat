@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "release": "YoganandaChat v1.0",
+  "version": "1.0.0",
+  "hash_algorithm": "SHA-256",
+  "canonical_verification_file": "SHA256SUMS",
+  "note": "manifest.json cannot self-hash; its checksum is stored in manifest.json.sha256. SHA256SUMS cannot self-hash; its checksum is stored in SHA256SUMS.sha256.",
+  "source": {
+    "corpus_title": "Autobiography of a Yogi",
+    "author": "Paramahansa Yogananda",
+    "project_gutenberg_ebook": 7452,
+    "uploaded_source_filename": "pg7452.txt",
+    "packaged_filename": "Autobiography_of_a_Yogi_1946_Public_Domain.txt"
+  },
+  "files": [
+    {
+      "path": "YoganandaChat_v1.0.json",
+      "role": "bootloader",
+      "bytes": 48034,
+      "sha256": "1cedbfa9ecc4aa08145f1c24e65f1991a9f3fdab6d17d89e2bb412ad9bb42e13"
+    },
+    {
+      "path": "Autobiography_of_a_Yogi_1946_Public_Domain.txt",
+      "role": "canonical_primary_corpus",
+      "bytes": 983099,
+      "sha256": "1299580d5017a3b63194d739394ffec7a63145e6789c04cfc95be3241a0d7d79"
+    },
+    {
+      "path": "prompt.txt",
+      "role": "exact_activation_prompt",
+      "bytes": 134,
+      "sha256": "85be5b69dde1d8230d37e1c5669e86a50a9c269f7dfc803b4aca6e3b70568c6b"
+    },
+    {
+      "path": "README.md",
+      "role": "release_documentation",
+      "bytes": 1808,
+      "sha256": "2869303ca461939846fc224b51cbccc8365979800390531d4c447c2dda5724fe"
+    },
+    {
+      "path": "VERIFY.md",
+      "role": "verification_instructions",
+      "bytes": 681,
+      "sha256": "50a2c8929c4a9ef745e14e562daff910b1d98d8f88e911c0d4df90686553b631"
+    },
+    {
+      "path": "LICENSE",
+      "role": "gpl_v3_license",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "copyright-information.txt",
+      "role": "copyright_and_license_information",
+      "bytes": 9048,
+      "sha256": "14001b58518bca54b238b1c38a0c96ff9cc6371761e46835e431a5059379ef4b"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "role": "github_actions_integrity_check",
+      "bytes": 501,
+      "sha256": "cc5f16989d5dedd25f4bb18963a01f57d06759bed64578df4a7d3dbb55a37aa9"
+    }
+  ]
+}
