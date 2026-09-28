@@ -3,6 +3,8 @@ name: Bootstrap canonical v1.0 payload
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
@@ -13,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
       - name: Materialize and verify canonical payload
         shell: bash
         run: |
@@ -38,11 +42,15 @@ jobs:
                   raise SystemExit(f'Hash mismatch for {name}: {got} != {expected}')
               (root / name).write_bytes(data)
           PY
-      - name: Commit canonical payload
+      - name: Commit canonical payload to branch
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add YoganandaChat_v1.0.json Autobiography_of_a_Yogi_1946_Public_Domain.txt LICENSE
+          if git diff --cached --quiet; then
+            echo "Canonical payload already present."
+            exit 0
+          fi
           git commit -m "release: add canonical YoganandaChat v1.0 payload"
-          git push
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
