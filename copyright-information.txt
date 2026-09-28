@@ -1,0 +1,213 @@
+YoganandaChat v1.0 — Copyright and Licensing Information
+========================================================
+
+Verification date: 2026-09-28
+
+This file explains the copyright and licensing layers in the YoganandaChat
+v1.0 release. It is intended to make redistribution and automated repository
+review easier. It is informational and is not legal advice.
+
+1. YOGANANDACHAT PROJECT FILES — GNU GPL v3.0
+----------------------------------------------
+
+SPDX-License-Identifier: GPL-3.0-only
+
+Except for third-party material expressly identified below, the original
+YoganandaChat project files in this release are licensed under the GNU General
+Public License, Version 3, dated 29 June 2007 (GPLv3).
+
+The complete license text is included in the repository-root file:
+
+    LICENSE
+
+Project copyright notice:
+
+    Copyright (C) 2026 YoganandaChat contributors
+
+The GPLv3-covered project files include, without limitation:
+
+    YoganandaChat_v1.0.json
+    prompt.txt
+    README.md
+    VERIFY.md
+    copyright-information.txt
+    manifest.json
+    manifest.json.sha256
+    SHA256SUMS
+    SHA256SUMS.sha256
+    .github/workflows/verify.yml
+
+The GNU GPL v3.0 license text itself is copyrighted by the Free Software
+Foundation and may be copied and distributed verbatim as stated in that
+license document. The GPL does NOT relicense public-domain or third-party
+material merely because that material is distributed in the same repository
+or ZIP archive.
+
+Official GNU GPLv3 information:
+    https://www.gnu.org/licenses/gpl-3.0.html
+
+2. AUTOBIOGRAPHY OF A YOGI — 1946 FIRST-EDITION TEXT
+-----------------------------------------------------
+
+Packaged corpus file:
+
+    Autobiography_of_a_Yogi_1946_Public_Domain.txt
+
+Source:
+    Project Gutenberg eBook #7452
+    https://www.gutenberg.org/ebooks/7452
+
+Underlying work:
+    Autobiography of a Yogi
+    Paramhansa / Paramahansa Yogananda
+    Original 1946 first edition
+
+The 1946 first-edition text is NOT licensed under the YoganandaChat GPL.
+It is treated as a separate third-party/public-domain corpus.
+
+U.S. status — verification basis
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A. The exact Project Gutenberg file supplied for this release states that the
+   eBook may be copied, given away, or reused under the Project Gutenberg
+   License and instructs users outside the United States to check local law.
+
+B. Project Gutenberg's current license policy explains that books it classifies
+   as not restricted by U.S. copyright law may be read and distributed in the
+   United States, and distinguishes the underlying book text from Project
+   Gutenberg's own trademark/license material.
+
+   Source:
+   https://www.gutenberg.org/policy/license.html
+
+C. Ananda's page for the original 1946 edition states that its online edition
+   is identical to the first-edition text and answers the question "Who owns
+   the copyright on Autobiography of a Yogi?" with the statement that the
+   first edition is in the public domain.
+
+   Source:
+   https://www.ananda.org/free-inspiration/books/autobiography-of-a-yogi/about-this-edition/
+
+D. The U.S. Copyright Office explains the historical renewal rule applicable
+   to many works first published under the 1909 Copyright Act: if a work whose
+   copyright required renewal was not validly renewed, protection expired at
+   the end of its first 28-year term.
+
+   Source:
+   U.S. Copyright Office, Circular 15A, Duration of Copyright
+   https://www.copyright.gov/circs/circ15a.pdf
+
+E. Relevant federal appellate history: in Self-Realization Fellowship Church
+   v. Ananda Church of Self-Realization, 206 F.3d 1322 (9th Cir. 2000), the
+   Ninth Circuit held, in addressing renewal rights in Yogananda's writings,
+   that SRF was not entitled to renew its copyrights in books authored by
+   Yogananda. This case is useful legal background to the renewal issue; this
+   notice does not represent it as a standalone judicial declaration about
+   every component or later edition of this particular eBook.
+
+   Source:
+   https://law.justia.com/cases/federal/appellate-courts/F3/206/1322/598061/
+
+Based on the public-domain classification supplied by Project Gutenberg and
+Ananda for the original 1946 first edition, this release treats that original
+first-edition text as not restricted by U.S. copyright law. Later editions,
+post-1946 additions, editorial revisions, photographs, recordings, lesson
+materials, translations, or other Yogananda-related works are NOT declared
+public domain by this notice and must be evaluated separately.
+
+3. PROJECT GUTENBERG LICENSE AND TRADEMARK LAYER
+------------------------------------------------
+
+The packaged corpus is an exact-byte copy of the user-supplied Project
+Gutenberg plain-text eBook #7452, renamed only at the filesystem level for
+clarity. The text itself still contains Project Gutenberg notices, license
+language, and references to the PROJECT GUTENBERG trademark.
+
+Accordingly, redistribution of THIS PACKAGED GUTENBERG FILE should retain and
+comply with the Project Gutenberg License included in that file. Project
+Gutenberg explains that its name is a registered trademark and that special
+terms can apply when distributing a file that retains Project Gutenberg
+references, especially in commercial distribution.
+
+Project Gutenberg policy also explains that, for works not restricted by U.S.
+copyright law, a distributor who removes the Project Gutenberg license and all
+Project Gutenberg references is left with the underlying text unrestricted by
+U.S. intellectual-property law. Do not interpret that statement as advice
+about law outside the United States.
+
+Project Gutenberg license:
+    https://www.gutenberg.org/policy/license.html
+
+Project Gutenberg permissions guidance:
+    https://www.gutenberg.org/policy/permission.html
+
+4. TERRITORIAL LIMITATION
+-------------------------
+
+"Public domain" status is jurisdiction-specific. This release's affirmative
+copyright-status statement is limited to the United States. Project Gutenberg
+itself instructs users outside the United States to check the law of the
+country where they are located before copying, distributing, adapting, or
+otherwise using the eBook.
+
+5. NO RELICENSING OF THIRD-PARTY MATERIAL
+-----------------------------------------
+
+The root GPLv3 LICENSE governs YoganandaChat's original project material only.
+It does not assert copyright ownership over, or impose GPL terms on:
+
+    * the underlying 1946 public-domain first-edition text;
+    * Project Gutenberg's trademarks, license text, or other protected marks;
+    * later copyrighted editions or revisions of Autobiography of a Yogi;
+    * Self-Realization Fellowship / Yogoda Satsanga Society publications;
+    * Ananda / Crystal Clarity material outside material independently in the
+      public domain or otherwise lawfully reusable;
+    * photographs, audio recordings, translations, lessons, or other
+      third-party materials not included under an express compatible license.
+
+6. NAMES, TRADEMARKS, AND ENDORSEMENT
+-------------------------------------
+
+YoganandaChat is an independent historical-conversation simulation project.
+It is not endorsed by, sponsored by, affiliated with, or an official product
+of Self-Realization Fellowship, Yogoda Satsanga Society of India, Ananda,
+Crystal Clarity Publishers, Project Gutenberg, or the estates or successors of
+any historical person mentioned in the corpus.
+
+The names and marks of third parties remain the property of their respective
+holders. Inclusion of source names for identification, attribution, historical
+reference, or license compliance does not imply endorsement.
+
+7. PRACTICAL REDISTRIBUTION CHECKLIST
+-------------------------------------
+
+For an unchanged GitHub release of YoganandaChat v1.0:
+
+    1. Keep LICENSE with the GPLv3-covered YoganandaChat project files.
+    2. Keep this copyright-information.txt file.
+    3. Keep the Project Gutenberg license notices inside the packaged corpus
+       if redistributing that Gutenberg-formatted file.
+    4. Do not label the Gutenberg corpus itself as GPL-licensed.
+    5. Do not assume later Yogananda editions or other works are public domain.
+    6. Verify local copyright law before redistribution outside the U.S.
+    7. Preserve SHA256SUMS and manifest.json when distributing the official
+       release so users can verify file integrity.
+
+8. MACHINE-READABLE LICENSE SUMMARY
+-----------------------------------
+
+YoganandaChat original project material:
+    SPDX: GPL-3.0-only
+    License file: LICENSE
+
+Autobiography_of_a_Yogi_1946_Public_Domain.txt:
+    Underlying 1946 first-edition text: public domain / not restricted by U.S.
+    copyright law according to the sources described above.
+    Distributed copy: retains Project Gutenberg notices and is redistributed
+    subject to the Project Gutenberg License/trademark terms embedded in it.
+    SPDX shorthand for the combined packaged file: NOASSERTION
+
+Project Gutenberg license/trademark material:
+    Third-party terms; not GPL-licensed by YoganandaChat.
+
+END OF COPYRIGHT AND LICENSING INFORMATION
