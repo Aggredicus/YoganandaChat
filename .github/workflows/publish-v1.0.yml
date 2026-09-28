@@ -1,0 +1,84 @@
+name: Publish YoganandaChat v1.0
+
+on:
+  push:
+    branches: [publish-v1.0]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out canonical main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Verify canonical source tree
+        run: |
+          sha256sum --check SHA256SUMS
+          sha256sum --check manifest.json.sha256
+          sha256sum --check SHA256SUMS.sha256
+      - name: Build reproducible release ZIP
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+
+          files = [
+              '.github/workflows/verify.yml',
+              'Autobiography_of_a_Yogi_1946_Public_Domain.txt',
+              'LICENSE',
+              'README.md',
+              'SHA256SUMS',
+              'SHA256SUMS.sha256',
+              'VERIFY.md',
+              'YoganandaChat_v1.0.json',
+              'copyright-information.txt',
+              'manifest.json',
+              'manifest.json.sha256',
+              'prompt.txt',
+          ]
+          out = Path('YoganandaChat-v1.0.zip')
+          prefix = 'YoganandaChat-v1.0/'
+          with zipfile.ZipFile(out, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+              for name in files:
+                  data = Path(name).read_bytes()
+                  info = zipfile.ZipInfo(prefix + name, date_time=(2026, 9, 28, 0, 0, 0))
+                  info.compress_type = zipfile.ZIP_DEFLATED
+                  info.external_attr = 0o100644 << 16
+                  info.create_system = 3
+                  z.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
+          PY
+          sha256sum YoganandaChat-v1.0.zip > YoganandaChat-v1.0.zip.sha256
+          cat YoganandaChat-v1.0.zip.sha256
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          cat > /tmp/release-notes.md <<'EOF'
+          # YoganandaChat v1.0
+
+          Canonical first stable release of YoganandaChat, a portable historical-conversation bootloader grounded in the public-domain 1946 edition of *Autobiography of a Yogi*.
+
+          ## Quick start
+
+          Attach `YoganandaChat_v1.0.json` and `Autobiography_of_a_Yogi_1946_Public_Domain.txt` to a capable AI chat, then send the contents of `prompt.txt`.
+
+          ## Integrity and licensing
+
+          The source tree and release package include SHA-256 verification files, GNU GPL v3.0 licensing for original YoganandaChat project material, and a separate copyright explanation for the Project Gutenberg corpus.
+
+          This is an independent historical simulation project; it does not claim to recreate, channel, or officially represent Paramahansa Yogananda or Self-Realization Fellowship.
+          EOF
+          if gh release view v1.0 >/dev/null 2>&1; then
+            gh release upload v1.0 YoganandaChat-v1.0.zip YoganandaChat-v1.0.zip.sha256 --clobber
+          else
+            gh release create v1.0 YoganandaChat-v1.0.zip YoganandaChat-v1.0.zip.sha256 \
+              --target main \
+              --title 'YoganandaChat v1.0' \
+              --notes-file /tmp/release-notes.md
+          fi
